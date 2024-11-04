@@ -11,6 +11,58 @@ $(function(){
     $('.projectWork li').eq(index).addClass('active');
   });
 })
+$(document).ready(function() {
+  let currentImageIndex = -1; // 현재 보여지는 이미지의 인덱스 (-1: 아무것도 보여지지 않음)
+
+  $('.banner a').click(function(e) {
+      e.preventDefault();
+      currentImageIndex = $(this).data('index') - 1;
+      $('.bannerPopup ul li').hide().eq(currentImageIndex).show();
+  });
+
+  $(document).click(function(e) {
+      if ($(e.target).closest('.banner').length === 0) {
+          // .sns 영역이 아닌 곳을 클릭한 경우
+          currentImageIndex = -1;
+          $('.bannerPopup ul li').hide();
+      }
+  });
+
+  // 각 이미지에 data-index 속성 부여 (수정 필요)
+  $('.banner a:nth-child(1)').data('index', 1);
+  $('.banner a:nth-child(2)').data('index', 2);
+  $('.banner a:nth-child(3)').data('index', 3);
+  $('.banner a:nth-child(4)').data('index', 4);
+  // ... 이하 생략 (8번까지 반복)
+});
+$(document).ready(function() {
+  let currentImageIndexs = -1; // 현재 보여지는 이미지의 인덱스 (-1: 아무것도 보여지지 않음)
+
+  $('.sns a').click(function(e) {
+      e.preventDefault();
+      currentImageIndexs = $(this).data('index') - 1;
+      $('.snsPopup ul li').hide().eq(currentImageIndexs).show();
+  });
+
+  $(document).click(function(e) {
+      if ($(e.target).closest('.sns').length === 0) {
+          // .sns 영역이 아닌 곳을 클릭한 경우
+          currentImageIndexs = -1;
+          $('.snsPopup ul li').hide();
+      }
+  });
+
+  // 각 이미지에 data-index 속성 부여 (수정 필요)
+  $('.sns a:nth-child(1)').data('index', 1);
+  $('.sns a:nth-child(2)').data('index', 2);
+  $('.sns a:nth-child(3)').data('index', 3);
+  $('.sns a:nth-child(4)').data('index', 4);
+  $('.sns a:nth-child(5)').data('index', 5);
+  $('.sns a:nth-child(6)').data('index', 6);
+  $('.sns a:nth-child(7)').data('index', 7);
+  $('.sns a:nth-child(8)').data('index', 8);
+  // ... 이하 생략 (8번까지 반복)
+});
 
 $(document).ready(function() {
   var text = "WELCOME TO MY PORTFOLIO!";
