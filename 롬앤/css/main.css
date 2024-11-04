@@ -1,0 +1,269 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+
+#wrap {
+  width: 100%; height: 100%;
+  max-width: 1920px;
+}
+/* header area */
+#header {
+  display: flex;
+  position: fixed;
+  width: 100%; height: 70px;
+  top: 0;
+  z-index: 9998;
+  background-color: transparent; /* 기본 투명 */
+  transition: background-color 0.3s ease; /* 부드러운 배경색 전환 */
+}
+#header .logo {
+  width: 100%; height: 50px;
+  padding-top: 10px;
+  text-align: center;
+  min-width: 1200px;
+}
+#header .nav .menuOpen {
+  position: fixed;
+  width: 30px; height: 30px;
+  top: 20px; left: 20px;
+  z-index: 9995;
+}
+.scrolled {
+  background-color: #fff; /* 스크롤 후 변경될 색상 */
+}
+#header .nav {
+  position: fixed;
+  top: 0; left: -400px;
+  background-color: #fff;
+  width: 360px; height: 100%;
+  transition: 0.5s ease;
+  z-index: 9998;
+  padding-left: 40px;
+}
+#header .nav>ul {
+  width: 360px; height: 420px;
+  margin-top: 20px;
+}
+#header .nav>ul>li {
+  position: relative;
+  width: 100%; height: 60px;
+}
+#header .nav>ul>li:first-child>a:hover {
+  text-decoration: underline;
+}
+#header .nav>ul>li>a {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  width: 100%; height: 100%;
+  line-height: 60px;
+  font-weight: 500;
+  color: #333;
+  font-size: 18px;
+}
+#header .nav>ul>li:nth-child(2)>a:hover {
+  background-color: #fff7e4;
+}
+#header .nav>ul>li:nth-child(3)>a:hover {
+  background-color: #fff7e4;
+}
+#header .nav>ul>li>ul {
+  display: none;
+  position: absolute;
+  z-index: 333;
+  width: 340px; height: 400px;
+  background-color: #fff;
+  padding-left: 20px;
+}
+#header .nav>ul>li>ul li {
+  width: 100%; height: 40px;
+  background-color: #fff;
+}
+#header .nav>ul>li>ul li a {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  width: 100%; height: 100%;
+  line-height: 40px;
+  color: #333;
+  font-size: 17px;
+  background-color: #fff;
+}
+#header .nav>ul>li>ul li a:hover {
+  font-weight: 700;
+}
+/* slide area */
+#slide {
+  overflow: hidden;
+  position: relative;
+  width: 100%; height: 1200px;
+  margin: 0 auto;
+}
+#slide ul {
+  position: absolute;
+  display: flex;
+  width: 5760px; height: 100%;
+  top: 0; left: 0; z-index: 9996;
+}
+#slide ul li {
+  width: 1920px; height: 1200px;
+}
+/* container area */
+#container {
+  width: 1200px; height: 2160px;
+  margin: 0 auto;
+}
+#container .brandWrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%; height: 1000px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+#container .brandWrap .line {
+  margin-bottom: 20px;
+}
+#container .brandWrap .brandSentence {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+#container .brandWrap h1 {
+  margin-top: 30px;
+  font-size: 36px;
+  font-weight: normal;
+}
+#container .brandWrap .brandStory {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #666;
+  line-height: 2;
+}
+#container .brandWrap .brandVideo {
+  margin-top: 60px;
+}
+#container .shoppingPage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%; height: 1000px;
+}
+#container .shoppingPage h2 {
+  width: 100%; height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+}
+#container .shoppingPage .soppingWrap {
+  width: 100%; height: 900px;
+  margin-top: 50px;
+}
+#container .shoppingPage .soppingWrap ul{
+  width: 100%; height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#container .shoppingPage .soppingWrap ul li {
+  width: 500px; height: 450px;
+  text-align: left;
+  margin-left: 66.6666px;
+}
+#container .shoppingPage .soppingWrap ul li h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+#container .shoppingPage .soppingWrap ul li p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+#container .shoppingPage .soppingWrap ul li .soppingBtn {
+  margin-top: 15px;
+  width: 100%; height: 30px;
+  display: flex;
+}
+#container .shoppingPage .soppingWrap ul li .soppingBtn .buy {
+  width: 130px; height: 40px;
+  background-color: #000; color: #fff;
+  font-size: 12px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+}
+#container .shoppingPage .soppingWrap ul li .soppingBtn .plus {
+  width: 130px; height: 40px;
+  background-color: #fff; color: #000;
+  font-size: 12px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #666;
+}
+#footer {
+  width: 100%; height: 500px;
+  background-color: #fff7e4;
+}
+#footer .footerWrap {
+  width: 1200px; height: 100%;
+  margin: 0 auto;
+}
+#footer .footerWrap .btm {
+  display: flex;
+  width: 600px; height: 20px;
+  padding-top: 100px;
+}
+#footer .footerWrap .btm li {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 30px;
+  color: #666;
+}
+#footer .footerWrap .footerLogo {
+  display: flex;
+  width: 650px; height: 50px;
+  line-height: 50px;
+  margin-top: 70px;
+}
+#footer .footerWrap .footerLogo img {
+  margin-right: 20px;
+}
+#footer .footerWrap .footerLogo .customer {
+  width: 100px; height: 30px;
+  background-color: #999;
+  font-size: 10px;
+  line-height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  margin-right: 20px;
+}
+#footer .footerWrap .footerLogo p {
+  font-size: 14px;
+}
+#footer .footerWrap .footerInfo {
+  width: 100%; height: 70px;
+}
+#footer .footerWrap .footerInfo ul {
+  width: 100%; height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+}
+#footer .footerWrap .footerInfo ul li {
+  font-size: 14px;
+  color: #333;
+}
+#footer .footerWrap .copyright {
+  border-top: 1px solid #d1d1d1;
+  margin-top: 20px;
+}
+#footer .footerWrap .copyright p {
+  font-size: 14px;
+  color: #999;
+  margin-top: 30px;
+}
